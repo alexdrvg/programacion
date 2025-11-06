@@ -1,2 +1,2 @@
-# programaci-n
+# programacion
 1r DAM :b :>
