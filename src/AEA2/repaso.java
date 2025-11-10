@@ -1,7 +1,7 @@
 package AEA2;
 
 // import java.util.Random;
-import java.util.Scanner;
+// import java.util.Scanner;
 
 public class repaso { 
     
