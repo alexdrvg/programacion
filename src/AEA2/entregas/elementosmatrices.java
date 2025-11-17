@@ -13,17 +13,14 @@ public class elementosmatrices {
         int columnas = s.nextInt(); 
 
         int[][] matrices = new int [filas][columnas]; 
-        int numFilas = 0; 
-        int numColumnas = 0; 
 
         for (int i=0; i<matrices.length; i++) {
-            
-            System.out.println("Introduce un numero: ");
-            numFilas = s.nextInt(); 
 
             for (int j=0; j<matrices[i].length; j++) {
-                System.out.println("Introduce un numero: ");
-                numColumnas = s.nextInt(); 
+
+                System.out.println("Introduce un numero para la fila "+i+" y la columna "+j);
+                matrices[i][j] = s.nextInt(); 
+
             }
 
         }
@@ -32,7 +29,7 @@ public class elementosmatrices {
 
         for (int i=0; i<matrices.length; i++) {
             for (int j=0; j<matrices[i].length; j++) {
-                System.out.print(matrices[numFilas][numColumnas]+" ");
+                System.out.print(matrices[i][j]+" ");
             }
             System.out.println();
         }
