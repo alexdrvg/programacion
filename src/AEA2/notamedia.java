@@ -3,7 +3,7 @@ package AEA2;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ejercicios {
+public class notamedia {
     public static void main(String[] args) {
     
         Scanner s = new Scanner(System.in);

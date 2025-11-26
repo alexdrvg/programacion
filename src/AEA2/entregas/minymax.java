@@ -10,7 +10,7 @@ public class minymax {
 		Arrays.sort(a);
 
         System.out.println("Este es el vector más pequeño: "+a[0]);
-        System.out.println("Este es el vector más grande: "+a[15]);
+        System.out.println("Este es el vector más grande: "+a[a.length-1]);
 
     }
 }

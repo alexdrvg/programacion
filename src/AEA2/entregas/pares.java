@@ -7,12 +7,9 @@ public class pares {
 		System.out.println("Arrays con 100 numeros pares:");
 
 		for (int i=0; i<a.length; i++) {
-			
-			if (a[i]%2==0) {
-				a[i]= i * 2; 
-				System.out.print(a[i]+" ");
-			}
-					
+			a[i]= i * 2; 
+			System.out.print(a[i]+" ");
+		
 		}
     }
 }
