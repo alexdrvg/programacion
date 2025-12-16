@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class registreTemperatures {
   //Constants
   private static final int MAX_SETMANES = 52;
-  public static final Scanner s = new Scanner(System.in); 
+  public static final Scanner s = new Scanner(System.in); // final significa que el valor no se puede canviar
 
   //Variables globals
   private boolean fi = false; // mentre FI sigui FALSE, executarem el programa
