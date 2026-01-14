@@ -3,6 +3,7 @@ package AEA3.entregas;
 import java.util.Scanner;
 
 public class LlegirEnters {
+ 
   public static void main (String[] args) {
     LlegirEnters programa = new LlegirEnters();
     programa.inici();
