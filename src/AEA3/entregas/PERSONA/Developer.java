@@ -1,4 +1,4 @@
-package AEA3.PERSONA;
+package AEA3.entregas.PERSONA;
 
 public class Developer extends Employee {
     private String lenguaje_programacion;
