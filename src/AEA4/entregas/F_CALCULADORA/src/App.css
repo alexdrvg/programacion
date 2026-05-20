@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #eef2f3, #baa0b2); 
+}
+
+.grid-calculadora {
+
+  display: grid;
+  grid-template-columns: repeat(4, 4rem);
+  grid-template-rows: minmax(6rem, auto) repeat(5, 4rem);
+  
+  gap: 8px; /*separamos + los botones visualmente*/
+  padding: 15px;
+  background-color: rgba(232, 203, 228, 0.836);
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.16); /*sombra*/
+}
+
+.borrar-todo, .igual {
+  grid-column: span 2; /*que ocupe dos columas en cambio de una*/
+}
+
+.panel {
+  grid-column: 1 / -1; /* ahora irá desde la columna 1 hasta la última */
+  background-color: rgba(255, 255, 255, 0.85);
+  
+  display: flex;
+  padding: 1rem; /*el espacio entre los dos num anterior y num actual*/
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  
+  gap: 8px;
+  border-radius: 16px; 
+  margin-bottom: 8px; /*separación con la primera fila de botones*/
+  position: relative; 
+}
+
+.panel .numeros-anteriores {
+  color: #7d6e7a;
+  font-size: 1rem;
+  /*aclaramos el color de los numeros de arriba y lo ponemos mas pequeño q el valor actual*/
+}
+
+.panel .numeros-actuales {
+  color: #2b2029;
+  font-size: 2rem; 
+  font-weight: 600; 
+  word-break: break-all; /*crea una linea extra si el los numeros superan el panel*/
+}
+
+.grid-historial {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10; /* el botón y su menu queden por encima de los números */
+}
+
+.boton-historial {
+  border: 1px solid rgb(255, 255, 255);
+  padding: 5px;
+  border-radius: 4px;
+  display: flex;
+}
+
+.historial-flotante {
+  position: absolute;
+  top: 35px; /*se abre debajo del reloj*/
+  left: 0;
+  width: 180px;
+  background-color: white;
+  border: 2px solid #e0b0d5;
+  border-radius: 10px;
+  max-height: 150px;
+  overflow-y: auto; /* scroll si se llena el hist */
+  padding: 5px;
+}
+
+.item-historial {
+  padding: 8px;
+  font-size: 0.85rem;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333;
+  text-align: left;
+  font-family: monospace;
+}
+
+.icono-reloj {
+  width: 20px;   
+  height: 20px;  
+  display: block; /* se quitan espacios debajo de la imagen */
+}
+
+
+
+.grid-calculadora > button { /*seleccionamos todos tags botones */
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #3d313c;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: none; /*quitamos los bordes duros antiguos*/
+  border-radius: 16px; /*botones suavizados*/ 
+  cursor: pointer; /*pasamos el cursor a un puntero*/
+}
+
+.grid-calculadora > button:hover { 
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+button[class]:hover {
+  background-color: #f3dbe4;
+}
+
+button.igual:hover {
+  background-color: #cd9ac0;
+}
+
+
+button[class] { 
+  background-color: #e0b0d5;
+  color: #613e59;
+}
+
+button.igual {
+  background-color: #d178bc;
+  color: white;
+}
